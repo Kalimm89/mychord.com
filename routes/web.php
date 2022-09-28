@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ArtistController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +20,5 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
+    Route::resource('/artists', ArtistController::class);
 });
