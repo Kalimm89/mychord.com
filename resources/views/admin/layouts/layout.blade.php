@@ -74,7 +74,7 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="public/assets/admin/images/user.png" width="48" height="48" alt="User" />
+                    <img src="/public/assets/admin/images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</div>
@@ -115,7 +115,7 @@
                                 <a href="pages/forms/basic-form-elements.html">Новый жанр</a>
                             </li>
                             <li>
-                                <a href="pages/forms/advanced-form-elements.html">Список жанров</a>
+                                <a href="">Список жанров</a>
                             </li>
                         </ul>
                     </li>
@@ -127,10 +127,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/forms/basic-form-elements.html">Новый исполнитель</a>
+                                <a href="{{ route('artists.create') }}">Новый исполнитель</a>
                             </li>
                             <li>
-                                <a href="pages/forms/advanced-form-elements.html">Список исполнителей</a>
+                                <a href="{{ route('artists.index') }}">Список исполнителей</a>
                             </li>
                         </ul>
                     </li>
@@ -312,7 +312,35 @@
         <!-- #END# Right Sidebar -->
     </section>
 
-    @yield('content')
+    <div class="content-wrapper">
+        <div class="container mt-2">
+          <div class="row">
+            <div class="col-12">
+            @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="list-unstyled">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if (session()->has('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+            </div>
+          </div>
+          
+        </div>
+      @yield('content')
+      </div>
 
     
     <!-- Js -->
