@@ -108,14 +108,14 @@
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
-                            <span>Жанры</span>
+                            <span>Стили</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/forms/basic-form-elements.html">Новый жанр</a>
+                                <a href="{{ route('styles.index') }}">Список стилей</a>
                             </li>
                             <li>
-                                <a href="">Список жанров</a>
+                                <a href="{{ route('styles.create') }}">Новый стиль</a>
                             </li>
                         </ul>
                     </li>
@@ -123,15 +123,16 @@
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
-                            <span>Исполнитель</span>
+                            <span>Исполнители</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="{{ route('artists.create') }}">Новый исполнитель</a>
-                            </li>
-                            <li>
                                 <a href="{{ route('artists.index') }}">Список исполнителей</a>
                             </li>
+                            <li>
+                                <a href="{{ route('artists.create') }}">Новый исполнитель</a>
+                            </li>
+                            
                         </ul>
                     </li>
                     
@@ -140,15 +141,16 @@
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
-                            <span>Песня</span>
+                            <span>Песни</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/forms/basic-form-elements.html">Новая песня</a>
+                                <a href="{{ route('songs.index') }}">Список песен</a>
                             </li>
                             <li>
-                                <a href="pages/forms/advanced-form-elements.html">Список песен</a>
+                                <a href="{{ route('songs.create') }}">Новая песня</a>
                             </li>
+                            
                         </ul>
                     </li>
                   

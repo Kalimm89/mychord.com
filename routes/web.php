@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ArtistController;
+use App\Http\Controllers\Admin\StyleController;
+use App\Http\Controllers\Admin\SongController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +23,6 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     Route::resource('/artists', ArtistController::class);
+    Route::resource('/styles', StyleController::class);
+    Route::resource('/songs', SongController::class);
 });

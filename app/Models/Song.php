@@ -11,6 +11,8 @@ class Song extends Model
     use HasFactory;
     use Sluggable;
 
+    protected $fillable = ['title', 'content', 'artist_id'];
+
     public function sluggable(): array
     {
         return [
