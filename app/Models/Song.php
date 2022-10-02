@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use App\Models\Artist;
+use App\Models\Style;
 
 class Song extends Model
 {
@@ -13,6 +15,16 @@ class Song extends Model
 
     protected $fillable = ['title', 'content', 'artist_id'];
 
+   
+
+    public function artist() {
+        return $this->belongsTo(Artist::class);
+    }
+
+    public function styles() {
+        return $this->belongsToMany(Style::class);
+    }
+
     public function sluggable(): array
     {
         return [
@@ -20,13 +32,5 @@ class Song extends Model
                 'source' => 'title'
             ]
         ];
-    }
-
-    public function styles() {
-        return $this->belongsToMany(Style::class);
-    }
-
-    public function artists() {
-        return $this->belongsTo(Artist::class);
     }
 }

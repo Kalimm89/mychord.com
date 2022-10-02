@@ -7,14 +7,24 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('public/assets/admin/images/favicon.ico') }}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
+
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"> --}}
     <!-- CSS -->
     <link href="{{ asset('public/assets/admin/css/admin.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/bootstrap-colorpicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/bootstrap-select.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/bootstrap-spinner.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/bootstrap-tagsinput.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/dropzone.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/multi-select.css') }}" rel="stylesheet" />
+    <link href="{{ asset('public/assets/admin/css/nouislider.min.css') }}" rel="stylesheet" />
+    
 </head>
     
 <body class="theme-red">
@@ -347,6 +357,14 @@
     
     <!-- Js -->
     <script src="{{ asset('public/assets/admin/js/admin.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/bootstrap-colorpicker.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/dropzone.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/jquery.inputmask.bundle.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/jquery.multi-select.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/jquery.spinner.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/bootstrap-tagsinput.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/nouislider.js') }}"></script>
+    <script src="{{ asset('public/assets/admin/js/advanced-form-elements.js') }}"></script>
    
 </body>
 
