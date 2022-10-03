@@ -7,7 +7,7 @@ use App\Models\Artist;
 use App\Models\Song;
 use App\Models\Style;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class SongController extends Controller
 {
@@ -49,28 +49,39 @@ class SongController extends Controller
     public function edit($id)
     {
         $song = Song::find($id);
-        return view('admin.songs.edit', compact('song'));
+        $artists = Artist::pluck('title', 'id')->all();
+        $styles = Style::pluck('title', 'id')->all();
+        return view('admin.songs.edit', compact('styles', 'artists', 'song'));
     }
 
-    
+ 
     public function update(Request $request, $id)
     {
         $request->validate([
             'title' => 'required',
+            'content' => 'required',
+            'artist_id' => 'required|integer'
         ]);
         $song = Song::find($id);
-        $song->update($request->all());
+
+        $data = $request->all();
+
+            // if($file = Song::uploadImage($request, $song->thumbnail)) {
+            //     $data['thumbnail'] = $file;
+            // }
+
+        $song->update($data);
+        $song->styles()->sync($request->styles);
         return redirect()->route('songs.index')->with('success', 'Изменения сохранены');
     }
 
-    
+  
     public function destroy($id)
     {
-        $song = Song::find($id);
-        // if ($song->songs->count()) {
-        //     return redirect()->route('categories.index')->with('error', 'Ошибка! У категории есть записи');
-        // }
+        $song = song::find($id);
+        $song->styles()->sync([]);
+        Storage::delete($song->thumbnail);
         $song->delete();
-        return redirect()->route('songs.index')->with('success', 'Исполнитель удалён');
+        return redirect()->route('songs.index')->with('success', 'Статья удалена');
     }
 }
