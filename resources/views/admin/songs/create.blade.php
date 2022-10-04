@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="content">Контент</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" placeholder="Контент ..." name="content" id="content" rows="5"></textarea>
+                                <textarea class="form-control @error('content') is-invalid @enderror" placeholder="Контент ..." name="content" id="content" rows="15" rows="15"></textarea>
                               </div>
                               <div class="form-group">
                                 <label class="styles">Стили</label>

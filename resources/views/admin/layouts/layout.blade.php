@@ -8,14 +8,15 @@
     <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
     <link rel="icon" href="{{ asset('public/assets/admin/images/favicon.ico') }}" type="image/x-icon">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
+    {{-- <link rel="stylesheet" type="text/css" href="/public/assets/Ckeditor/sample/styles.css"> --}}
 
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"> --}}
     <!-- CSS -->
+    {{-- <link href="{{ asset('public/assets/Ckeditor/sample/styles.css') }}" rel="stylesheet" /> --}}
     <link href="{{ asset('public/assets/admin/css/admin.css') }}" rel="stylesheet" />
     <link href="{{ asset('public/assets/admin/css/bootstrap-colorpicker.css') }}" rel="stylesheet" />
     <link href="{{ asset('public/assets/admin/css/bootstrap-select.css') }}" rel="stylesheet" />
@@ -26,8 +27,8 @@
     <link href="{{ asset('public/assets/admin/css/nouislider.min.css') }}" rel="stylesheet" />
     
 </head>
-    
 <body class="theme-red">
+    
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -365,7 +366,29 @@
     <script src="{{ asset('public/assets/admin/js/bootstrap-tagsinput.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/nouislider.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/advanced-form-elements.js') }}"></script>
-   
+    <script src="/public/assets/Ckeditor/build/ckeditor.js"></script>
+    <script>ClassicEditor
+            .create( document.querySelector( '#content' ), {
+                
+                licenseKey: '',
+                
+                
+                
+            } )
+            .then( editor => {
+                window.editor = editor;
+        
+                
+                
+                
+            } )
+            .catch( error => {
+                console.error( 'Oops, something went wrong!' );
+                console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+                console.warn( 'Build id: dm64hj9hmxy3-kr6ls2qrcudm' );
+                console.error( error );
+            } );
+    </script>
 </body>
 
 </html>

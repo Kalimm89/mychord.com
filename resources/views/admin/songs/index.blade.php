@@ -36,23 +36,23 @@
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Position: activate to sort column ascending"
-                                                        style="width: 330px;">Исполнитель</th>
+                                                        style="">Исполнитель</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
-                                                        style="width: 182px;">Название песни</th>
+                                                        style="">Название песни</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
-                                                        style="width: 182px;">Стиль</th>
+                                                        style="">Стиль</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
-                                                        style="width: 182px;">Текст/Аккорды/Караоке</th>
+                                                        style="">Текст/Аккорды/Караоке</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Age: activate to sort column ascending"
-                                                        style="width: 100px;">#</th>
+                                                        style="">#</th>
 
                                                 </tr>
                                             </thead>
@@ -64,7 +64,9 @@
                                                         <td>{{ $song->artist->title }}</td>
                                                         <td>{{ $song->title }}</td>
                                                         <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
+                                                        
                                                         <td>{{ $song->content }}</td>
+                                                        
                                                         <td>
                                                             <a href="{{ route('songs.edit', $song->id) }}"
                                                                 class="btn btn-info btn-sm float-left mr-1">
