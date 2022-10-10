@@ -48,7 +48,11 @@
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
-                                                        style="">Текст/Аккорды/Караоке</th>
+                                                        style="">Аккорды</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Office: activate to sort column ascending"
+                                                        style="">Караоке</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Age: activate to sort column ascending"
@@ -64,8 +68,8 @@
                                                         <td>{{ $song->artist->title }}</td>
                                                         <td>{{ $song->title }}</td>
                                                         <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
-                                                        
-                                                        <td>{{ $song->content }}</td>
+                                                        <td>{{ $song->chord }}</td>
+                                                        <td>{{ $song->video }}</td>
                                                         
                                                         <td>
                                                             <a href="{{ route('songs.edit', $song->id) }}"

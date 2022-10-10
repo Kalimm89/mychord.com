@@ -8,27 +8,25 @@
     <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
     <link rel="icon" href="{{ asset('public/assets/admin/images/favicon.ico') }}" type="image/x-icon">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-    {{-- <link rel="stylesheet" type="text/css" href="/public/assets/Ckeditor/sample/styles.css"> --}}
 
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"> --}}
-    <!-- CSS -->
-    {{-- <link href="{{ asset('public/assets/Ckeditor/sample/styles.css') }}" rel="stylesheet" /> --}}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+
     <link href="{{ asset('public/assets/admin/css/admin.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/bootstrap-colorpicker.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/bootstrap-select.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/bootstrap-spinner.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/bootstrap-tagsinput.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/dropzone.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/multi-select.css') }}" rel="stylesheet" />
-    <link href="{{ asset('public/assets/admin/css/nouislider.min.css') }}" rel="stylesheet" />
-    
+
+    <style>
+        .theme-red .navbar {
+            background-color: #F44336;
+        }
+    </style>
+
 </head>
+
 <body class="theme-red">
-    
+
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
@@ -64,16 +62,19 @@
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="{{ route('admin') }}">Админка</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Call Search -->
-                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i
+                                class="material-icons">search</i></a></li>
                     <!-- #END# Call Search -->
-                    <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                    {{-- <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i
+                                class="material-icons">more_vert</i></a></li> --}}
                 </ul>
             </div>
         </div>
@@ -91,7 +92,8 @@
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</div>
                     <div class="email">admin@admin.com</div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
                             <li role="separator" class="divider"></li>
@@ -115,7 +117,7 @@
                             <span>Главная</span>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
@@ -130,7 +132,7 @@
                             </li>
                         </ul>
                     </li>
-                    
+
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
@@ -143,11 +145,11 @@
                             <li>
                                 <a href="{{ route('artists.create') }}">Новый исполнитель</a>
                             </li>
-                            
+
                         </ul>
                     </li>
-                    
-                   
+
+
 
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
@@ -161,10 +163,10 @@
                             <li>
                                 <a href="{{ route('songs.create') }}">Новая песня</a>
                             </li>
-                            
+
                         </ul>
                     </li>
-                  
+
                 </ul>
             </div>
             <!-- #Menu -->
@@ -181,7 +183,7 @@
         </aside>
         <!-- #END# Left Sidebar -->
         <!-- Right Sidebar -->
-        <aside id="rightsidebar" class="right-sidebar">
+        {{-- <aside id="rightsidebar" class="right-sidebar">
             <ul class="nav nav-tabs tab-nav-right" role="tablist">
                 <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
                 <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
@@ -321,44 +323,46 @@
                     </div>
                 </div>
             </div>
-        </aside>
+        </aside> --}}
         <!-- #END# Right Sidebar -->
     </section>
 
     <div class="content-wrapper">
         <div class="container mt-2">
-          <div class="row">
-            <div class="col-12">
-            @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul class="list-unstyled">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    @if (session()->has('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
-    @if (session()->has('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
+            <div class="row">
+                <div class="col-12">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="list-unstyled">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if (session()->has('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+                    @if (session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                </div>
             </div>
-          </div>
-          
-        </div>
-      @yield('content')
-      </div>
 
-    
-    <!-- Js -->
+        </div>
+        @yield('content')
+    </div>
+
+
+    {{-- <!-- Js -->
+    <script src="{{ asset('public/assets/admin/js/admin_forms.js') }}"></script> --}}
     <script src="{{ asset('public/assets/admin/js/admin.js') }}"></script>
-    <script src="{{ asset('public/assets/admin/js/bootstrap-colorpicker.js') }}"></script>
+
+    {{-- <script src="{{ asset('public/assets/admin/js/bootstrap-colorpicker.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/dropzone.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/jquery.inputmask.bundle.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/jquery.multi-select.js') }}"></script>
@@ -366,29 +370,31 @@
     <script src="{{ asset('public/assets/admin/js/bootstrap-tagsinput.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/nouislider.js') }}"></script>
     <script src="{{ asset('public/assets/admin/js/advanced-form-elements.js') }}"></script>
-    <script src="/public/assets/Ckeditor/build/ckeditor.js"></script>
-    <script>ClassicEditor
-            .create( document.querySelector( '#content' ), {
-                
-                licenseKey: '',
-                
-                
-                
-            } )
-            .then( editor => {
-                window.editor = editor;
-        
-                
-                
-                
-            } )
-            .catch( error => {
-                console.error( 'Oops, something went wrong!' );
-                console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-                console.warn( 'Build id: dm64hj9hmxy3-kr6ls2qrcudm' );
-                console.error( error );
-            } );
-    </script>
+
+    <script src="{{ asset('resources/assets/admin/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('resources/assets/admin/plugins/bootstrap/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('resources/assets/admin/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
+    <script src="{{ asset('resources/assets/admin/plugins/jquery-slimscroll/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('resources/assets/admin/plugins/node-waves/waves.js') }}"></script>
+    <script src="{{ asset('resources/assets/admin/js/admin.js') }}"></script>
+    <script src="{{ asset('resources/assets/admin/js/demo.js') }}"></script> --}}
+
 </body>
 
 </html>
+
+{{-- 'resources/assets/admin/plugins/jquery/jquery.min.js',
+'resources/assets/admin/plugins/bootstrap/js/bootstrap.js',
+'resources/assets/admin/plugins/bootstrap-select/js/bootstrap-select.js',
+'resources/assets/admin/plugins/jquery-slimscroll/jquery.slimscroll.js',
+'public/assets/admin/js/bootstrap-colorpicker.js',
+'public/assets/admin/js/dropzone.js',
+'public/assets/admin/js/jquery.inputmask.bundle.js',
+'public/assets/admin/js/jquery.multi-select.js',
+'public/assets/admin/js/jquery.spinner.js',
+'public/assets/admin/js/bootstrap-tagsinput.js',
+'public/assets/admin/js/nouislider.js',
+'resources/assets/admin/plugins/node-waves/waves.js',
+'resources/assets/admin/js/admin.js',
+'public/assets/admin/js/advanced-form-elements.js'
+'resources/assets/admin/js/demo.js' --}}

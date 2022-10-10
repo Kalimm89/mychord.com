@@ -28,20 +28,33 @@
                             <div class="form-group">
                                 <label for="title">Название песни</label>
                                 <textarea class="form-control @error('title') is-invalid @enderror" placeholder="Введите название ..." name="title"
-                                    id="title" cols="" rows="5"></textarea>
+                                    id="title" cols="" rows=""></textarea>
                             </div>
-                            <div class="form-group">
+
+                            {{-- <div class="form-group">
                                 <label for="content">Контент</label>
                                 <textarea class="form-control @error('content') is-invalid @enderror" placeholder="Контент ..." name="content" id="content" rows="15" rows="15"></textarea>
-                              </div>
-                              <div class="form-group">
+                            </div> --}}
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="url" class="form-control @error('content') is-invalid @enderror" placeholder="Ссылка на аккорды" name="chord" required="" id="chord" aria-required="true">
+                                    {{-- <label class="form-control">Ссылка на аккорды</label> --}}
+                                </div>
+                            </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="url" class="form-control @error('content') is-invalid @enderror" placeholder="Ссылка на видео" name="video" required="" id="video" aria-required="true">
+                                    {{-- <label class="form-control">Ссылка на видео</label> --}}
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="styles">Стили</label>
                                 <select name="styles[]" class="select2" id="styles" multiple="multiple" data-placeholder="Выбор стилей" style="width: 100%;">
                                 @foreach($styles as $k => $v)
                                 <option value="{{ $k }}">{{ $v }}</option>
                                 @endforeach
                                 </select>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -32,7 +32,8 @@ class SongController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'content' => 'required',
+            'chord' => 'required',
+            'video' => 'required',
             'artist_id' => 'required|integer'
         ]);
         
@@ -59,7 +60,8 @@ class SongController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'content' => 'required',
+            'chord' => 'required',
+            'video' => 'required',
             'artist_id' => 'required|integer'
         ]);
         $song = Song::find($id);

@@ -13,7 +13,7 @@ class Song extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['title', 'content', 'artist_id'];
+    protected $fillable = ['title', 'chord', 'video', 'artist_id'];
 
    
 

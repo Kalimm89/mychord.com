@@ -31,10 +31,18 @@
                                 <textarea class="form-control @error('title') is-invalid @enderror" placeholder="Введите название ..." name="title"
                                     id="title" cols="" rows="5">{{ $song->title }}</textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="content">Контент</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" placeholder="Контент ..." name="content" id="content" rows="5">{{$song->content}}</textarea>
-                              </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="url" class="form-control @error('content') is-invalid @enderror" placeholder="Ссылка на аккорды" name="chord" required="" value="{{ $song->chord }}" id="chord" aria-required="true">
+                                   
+                                </div>
+                            </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="url" class="form-control @error('content') is-invalid @enderror" placeholder="Ссылка на видео" name="video" required="" value="{{ $song->video }}" id="video" aria-required="true">
+                                    
+                                </div>
+                            </div>
                               <div class="form-group">
                                 <label class="styles">Стили</label>
                                 <select name="styles[]" class="select2" id="styles" multiple="multiple" data-placeholder="Выбор стилей" style="width: 100%;">
