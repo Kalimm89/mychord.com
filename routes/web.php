@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ArtistController;
 use App\Http\Controllers\Admin\StyleController;
 use App\Http\Controllers\Admin\SongController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +21,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin')->group(function () {
+Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     Route::resource('/artists', ArtistController::class);
     Route::resource('/styles', StyleController::class);
     Route::resource('/songs', SongController::class);
 });
+Route::middleware('guest')->group(function () {
+Route::get('/register', [UserController::class, 'create'])->name('register.create');
+Route::post('/register', [UserController::class, 'store'])->name('register.store');
+Route::get('/login', [UserController::class, 'loginForm'])->name('login.create');
+Route::post('/login', [UserController::class, 'login'])->name('login');
+});
+Route::get('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
