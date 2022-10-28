@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>Free Musico Website Template | Home :: w3layouts</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="/public/assets/user/css/style.css" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script src="/public/assets/user/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <title>Free Musico Website Template | Home :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/public/assets/user/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="/public/assets/user/js/jquery-1.9.0.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $(".dropdown img.flag").addClass("flagvisibility");
@@ -13,21 +14,21 @@
             $(".dropdown dt a").click(function() {
                 $(".dropdown dd ul").toggle();
             });
-                        
+
             $(".dropdown dd ul li a").click(function() {
                 var text = $(this).html();
                 $(".dropdown dt a span").html(text);
                 $(".dropdown dd ul").hide();
                 $("#result").html("Selected value is: " + getSelectedValue("sample"));
             });
-                        
+
             function getSelectedValue(id) {
                 return $("#" + id).find("dt a span.value").html();
             }
 
             $(document).bind('click', function(e) {
                 var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
+                if (!$clicked.parents().hasClass("dropdown"))
                     $(".dropdown dd ul").hide();
             });
 
@@ -37,20 +38,22 @@
             });
         });
     </script>
-<!--slider-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/public/assets/user/css/default.css" rel="stylesheet" type="text/css" media="all" />
-<script src="/public/assets/user/js/jquery-1.9.0.min.js"></script>
+    <!--slider-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/public/assets/user/css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="/public/assets/user/js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
+        $(window).load(function() {
+            $('#slider').nivoSlider();
+        });
     </script>
 </head>
+
 <body>
-<div class="header">
-	{{-- <div class="header-top">
+    <div class="header">
+        {{-- <div class="header-top">
 		<div class="wrap">
 			<div class="left-sidebar">
 				 <ul>
@@ -98,124 +101,140 @@
 		 </div>
 	    <div class="clear"></div>
    </div> --}}
-	<div class="header-bot">
-		<div class="wrap">
-			<div class="header-bot1">
-				<div class="logo">
-					{{-- <a href="index.html"><img src="/public/assets/user/images/logo.png" alt=""></a> --}}
-					<h1 class="fw-bold fs-1">Mychord.com</h1>
-				</div>
-				<div class="ph-no">
-					<div class="search_box">
-					       <form>
-								<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
-					       </form>
-						</div>
-					    {{-- <a href="#"><div class="cart">
+        <div class="header-bot">
+            <div class="wrap">
+                <div class="header-bot1">
+                    <div class="logo">
+                        {{-- <a href="index.html"><img src="/public/assets/user/images/logo.png" alt=""></a> --}}
+                        <h1 class="fw-bold fs-1">Mychord.com</h1>
+                    </div>
+                    <div class="ph-no">
+                        <div class="search_box">
+                            <form>
+                                <input type="text" value="Search" onfocus="this.value = '';"
+                                    onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit"
+                                    value="">
+                            </form>
+                        </div>
+                        {{-- <a href="#"><div class="cart">
 							<span class="cart_title">Cart(empty)</span>
 							<img src="/public/assets/user/images/marker.png" alt=""/><div class="clear"></div>
 					   </div></a> --}}
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
-</div>
-	<div class="header-bottom">
-		<div class="wrap">
-			<nav id="menu-wrap">    
-				<ul id="menu">
-					<li><a href="index.html">Home</a></li>
-					<li>
-						<a href="about.html">About</a>
-							<ul>
-								<li><a href="about.html">Testimonials</a></li>
-								<li><a href="about.html">Archives</a></li>
-								<li><a href="about.html">Faqs</a></li>
-							</ul>
-					</li>
-					<li><a href="featured.html">Featured</a></li>
-					<li><a href="featured.html">Store</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-  <div class="banner">
-	<div id="wrapper">
- 		<script src="/public/assets/user/js/responsiveslides.min.js"></script>
-			 <script>
-			    // You can also use "$(window).load(function() {"
-			    $(function () {
-			      // Slideshow 4
-			      $("#slider4").responsiveSlides({
-			        auto: true,
-			        pager: true,
-			        nav: true,
-			        speed: 500,
-			        namespace: "callbacks",
-			        before: function () {
-			          $('.events').append("<li>before event fired.</li>");
-			        },
-			        after: function () {
-			          $('.events').append("<li>after event fired.</li>");
-			        }
-			      });
-			
-			    });
-			  </script>
-			  <div  id="top" class="callbacks_container">
-			      <ul class="rslides" id="slider4">
-			        <li>
-			          <div class="slider-top">
-			          	<a href="#"><img src="/public/assets/user/images/banner.jpg" alt="" /></a>
-			          </div>
-			        </li>
-			         <li>
-			          <div class="slider-top">
-			          	<a href="#"><img src="/public/assets/user/images/banner1.jpg" alt="" /></a>
-			          </div>
-			        </li>
-			         <li>
-			          <div class="slider-top">
-			          	<a href="#"><img src="/public/assets/user/images/banner2.jpg" alt="" /></a>
-			          </div>
-			        </li>
-			      </ul>
-			    </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
- <div class="main-cont index-main">
-<div class="main">
-	<div class="wrap">
-		<div class="content-top">
-				<div class="col_1_of_3 span_1_of_3">
-						<a href="single.html">
-							<img src="/public/assets/user/images/pic.jpg" alt=""/>
-							<div class="banner_content"><h2>Lorem<span>ipsum</span></h2><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor.<i class="icon-chevron-sign-right"></i></p>
-							</div>
-						</a>
-						<div class="icon-right"><a href="#"><img src="/public/assets/user/images/marker1.png" alt=""/></a></div>
-						<div class="clear"></div>
-				</div>
-				<div class="col_1_of_3 span_1_of_3">
-						<a href="single.html">
-							<img src="/public/assets/user/images/pic1.jpg" alt=""/>
-							<div class="banner_content"><h2>Lorem<span>ipsum</span></h2><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor.<i class="icon-chevron-sign-right"></i></p></div>
-						</a>
-						<div class="icon-right"><a href="#"><img src="/public/assets/user/images/marker1.png" alt=""/></a></div>
-				</div>
-				<div class="col_1_of_3 span_1_of_3">
-						<a href="single.html">
-							<img src="/public/assets/user/images/pic2.jpg" alt=""/>
-							<div class="banner_content"><h2>Lorem<span>ipsum</span></h2><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor.<i class="icon-chevron-sign-right"></i></p></div>
-						</a>
-						<div class="icon-right"><a href="#"><img src="/public/assets/user/images/marker1.png" alt=""/></a></div>
-				</div>
-				<div class="clear"></div>
-		</div>
-		<div class="section group">			
-				<div class="leftsidebar span_3_of_1">
+    <div class="header-bottom">
+        <div class="wrap">
+            <nav id="menu-wrap">
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About</a>
+                        <ul>
+                            <li><a href="about.html">Testimonials</a></li>
+                            <li><a href="about.html">Archives</a></li>
+                            <li><a href="about.html">Faqs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="featured.html">Featured</a></li>
+                    <li><a href="featured.html">Store</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="banner">
+        <div id="wrapper">
+            <script src="/public/assets/user/js/responsiveslides.min.js"></script>
+            <script>
+                // You can also use "$(window).load(function() {"
+                $(function() {
+                    // Slideshow 4
+                    $("#slider4").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        nav: true,
+                        speed: 500,
+                        namespace: "callbacks",
+                        before: function() {
+                            $('.events').append("<li>before event fired.</li>");
+                        },
+                        after: function() {
+                            $('.events').append("<li>after event fired.</li>");
+                        }
+                    });
+
+                });
+            </script>
+            <div id="top" class="callbacks_container">
+                <ul class="rslides" id="slider4">
+                    <li>
+                        <div class="slider-top">
+                            <a href="#"><img src="/public/assets/user/images/banner.jpg" alt="" /></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-top">
+                            <a href="#"><img src="/public/assets/user/images/banner1.jpg" alt="" /></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slider-top">
+                            <a href="#"><img src="/public/assets/user/images/banner2.jpg" alt="" /></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-cont index-main">
+        <div class="main">
+            <div class="wrap">
+                <div class="content-top">
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="single.html">
+                            <img src="/public/assets/user/images/pic.jpg" alt="" />
+                            <div class="banner_content">
+                                <h2>Lorem<span>ipsum</span></h2>
+                                <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor.<i
+                                        class="icon-chevron-sign-right"></i></p>
+                            </div>
+                        </a>
+                        <div class="icon-right"><a href="#"><img src="/public/assets/user/images/marker1.png"
+                                    alt="" /></a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="single.html">
+                            <img src="/public/assets/user/images/pic1.jpg" alt="" />
+                            <div class="banner_content">
+                                <h2>Lorem<span>ipsum</span></h2>
+                                <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor.<i
+                                        class="icon-chevron-sign-right"></i></p>
+                            </div>
+                        </a>
+                        <div class="icon-right"><a href="#"><img src="/public/assets/user/images/marker1.png"
+                                    alt="" /></a></div>
+                    </div>
+                    <div class="col_1_of_3 span_1_of_3">
+                        <a href="single.html">
+                            <img src="/public/assets/user/images/pic2.jpg" alt="" />
+                            <div class="banner_content">
+                                <h2>Lorem<span>ipsum</span></h2>
+                                <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor.<i
+                                        class="icon-chevron-sign-right"></i></p>
+                            </div>
+                        </a>
+                        <div class="icon-right"><a href="#"><img src="/public/assets/user/images/marker1.png"
+                                    alt="" /></a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="section group">
+                    {{-- <div class="leftsidebar span_3_of_1">
 					<div class="posts">
 					 <div class="date">
 								<figure><span>23</span>March</figure>
@@ -252,75 +271,45 @@
 							</div>
 						 <div class="clear"></div>	
 					</div>
- 				</div>	
- 	<div class="content span_1_of_c">			
-			<div class="con-left">
-				<div class="con-box">
-					<div class="grid images_3_of_2">
-						<img src="/public/assets/user/images/pic3.jpg" alt=""/>
-					</div>
-					<div class="desc span_3_of_2">
-						<h3>Tuesday, 5 August 2013</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div><div class="clear"></div>	
-				</div>
-				<div class="con-right-box">
-					<div class="grid images_3_of_2">
-						<img src="/public/assets/user/images/pic4.jpg" alt=""/>
-					</div>
-					<div class="desc span_3_of_2">
-						<h3>Tuesday, 5 August 2013</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div><div class="clear"></div>	
-				</div>
-				<div class="con-box">
-					<div class="grid images_3_of_2">
-						<img src="/public/assets/user/images/pic5.jpg" alt=""/>
-					</div>
-					<div class="desc span_3_of_2">
-						<h3>Tuesday, 5 August 2013</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div><div class="clear"></div>	
-				</div>
-			</div>
-			<div class="con-right">
-				<div class="con-right-box">
-					<div class="grid images_3_of_2">
-						<img src="/public/assets/user/images/pic6.jpg" alt=""/>
-					</div>
-					<div class="desc span_3_of_2">
-						<h3>Tuesday, 5 August 2013</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div><div class="clear"></div>	
-				</div>
-				<div class="con-box">
-					<div class="grid images_3_of_2">
-						<img src="/public/assets/user/images/pic7.jpg" alt=""/>
-					</div>
-					<div class="desc span_3_of_2">
-						<h3>Tuesday, 5 August 2013</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div><div class="clear"></div>	
-				</div>
-				<div class="con-right-box">
-					<div class="grid images_3_of_2">
-						<img src="/public/assets/user/images/pic9.jpg" alt=""/>
-					</div>
-					<div class="desc span_3_of_2">
-						<h3>Tuesday, 5 August 2013</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					</div><div class="clear"></div>	
-				</div>
-		     </div>
-		</div>
-		<div class="clear"></div>	
-	</div>
-  </div>
-</div>
-</div>
-<div class="footer">
-	<div class="wrap">
-		<div class="footer-top">
+ 				</div>	 --}}
+                    <div class="content span_1_of_c">
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-hover dashboard-task-infos table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Исполнитель</th>
+                                            <th>Название</th>
+                                            <th>Жанр</th>
+                                            <th>Аккорды</th>
+                                            <th>Караоке</th>
+                                        </tr>
+                                    </thead>
+                                    {{-- <tbody>
+                                        @foreach ($songs as $song)
+                                            <tr>
+                                                <td>{{ $song->id }}</td>
+                                                <td>{{ $song->artist->title }}</td>
+                                                <td>{{ $song->title }}</td>
+                                                <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
+                                                <td>{{ $song->chord }}</td>
+                                                <td>{{ $song->video }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody> --}}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            {{-- <div class="footer-top">
 			<div class="footer-grid">
 				<h3>About us</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  consectetur adipisicing elit, sed do eiusmod tempor.</p>
@@ -349,14 +338,16 @@
 				<a href="#">ReadMore</a>
 			</div>
 			<div class="clear"> </div>
-	</div>
-		</div>
-	</div>
-		<div class="copy-right">
-			<div class="wrap">
-				<p>&copy; 2013 Musico. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-			</div>
-		</div>
-		<div class="clear"> </div>
+	</div> --}}
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="wrap">
+            <p>&copy; 2013 Musico. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+        </div>
+    </div>
+    <div class="clear"> </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
