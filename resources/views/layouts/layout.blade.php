@@ -53,55 +53,8 @@
 
 <body>
     <div class="header">
-        {{-- <div class="header-top">
-		<div class="wrap">
-			<div class="left-sidebar">
-				 <ul>
-					<li class="first_item">
-					<h2><i class="icon-phone"><img src="/public/assets/user/images/contact.png" alt=""/></i>(800) 000-2587</h2><span>Hours:11am-7pm
-					</span><div class="clear"></div>
-					</li>
-			    </ul>
-			</div>
-			<div class="header_top_right">
-				<ul id="header_links">
-					<li id="header_link_contact"><a class="header_links_contact" href="#" title="contact">contact</a></li>
-					<li id="header_link_sitemap"><a class="header_links_sitemap" href="#" title="sitemap">sitemap</a></li>
-				</ul>
-				<dl id="sample" class="dropdown">
-			        <dt><a href="#"><span>Please Select the Country</span></a></dt>
-			        <dd>
-			            <ul>
-			                <li><a href="#">Australia<img class="flag" src="/public/assets/user/images/as.png" alt="" /><span class="value">AS</span></a></li>
-			                <li><a href="#">Sri Lanka<img class="flag" src="/public/assets/user/images/srl.png" alt="" /><span class="value">SL</span></a></li>
-			                <li><a href="#">New Zealand<img class="flag" src="/public/assets/user/images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-			                <li><a href="#">Pakistan<img class="flag" src="/public/assets/user/images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-			                <li><a href="#">Japan<img class="flag" src="/public/assets/user/images/jp.png" alt="" /><span class="value">JP</span></a></li>
-			              	<li><a href="#">United Kingdom<img class="flag" src="/public/assets/user/images/uk.png" alt="" /><span class="value">UK</span></a></li>
-			                <li><a href="#">United States<img class="flag" src="/public/assets/user/images/us.png" alt="" /><span class="value">US</span></a></li>
-			            </ul>
-			        </dd>
-   				 </dl>
- 				 <div class="dropdown" id="dropdown">
-					<input type="checkbox" id="drop1" />
-        			<label for="drop1" class="dropdown_button">$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow"></span></label>
-        				<ul class="dropdown_content">
-	       					<ul>
-								<li><a href="#"><span>$</span>Dollar</a></li>
-								<li><a href="#"><span>€</span>Euro</a></li>
-							</ul>
-						</ul>		
-				</div> 
-				<div class="login">
-		   	   		<span><a href="login.html"><img src="/public/assets/user/images/login.png" alt="" title="login"></a></span>
-		   		</div>
-		 		<div class="clear"></div>
-			 </div>
-			<div class="clear"></div>
-		 </div>
-	    <div class="clear"></div>
-   </div> --}}
         <div class="header-bot">
+            
             <div class="wrap">
                 <div class="header-bot1">
                     <div class="logo">
@@ -126,9 +79,13 @@
             </div>
         </div>
     </div>
-    <div class="header-bottom">
+    <div class="header-bottom ">
         <div class="wrap">
-            <nav id="menu-wrap">
+            <nav id="menu-wrap" style="padding: 13px 0 0px 0;">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex">
+                        <div class="mx-auto">
                 <ul id="menu">
                     <li><a href="index.html">Домой</a></li>
                     <li>
@@ -142,6 +99,10 @@
                     <li><a href="featured.html">Авторизация</a></li>
                     
                 </ul>
+            </div>
+        </div>
+    </div>
+            </div>
             </nav>
         </div>
     </div>

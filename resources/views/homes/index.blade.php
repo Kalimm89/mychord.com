@@ -3,7 +3,7 @@
 @section('header')
 
 
-
+<div class="container">
     <div class="banner">
         <div id="wrapper">
             <script src="/public/assets/user/js/responsiveslides.min.js"></script>
@@ -91,46 +91,11 @@
                     </div>
                     <div class="clear"></div>
                 </div>
-                <div class="section group">
-                    {{-- <div class="leftsidebar span_3_of_1">
-					<div class="posts">
-					 <div class="date">
-								<figure><span>23</span>March</figure>
-						</div>
-								<div class="post_desc">
-									<p>Lorem ipsum dolor sit amet consec tetuer adipiscing elit Praesent.</p>
-							</div>
-						 <div class="clear"></div>	
-					</div>
-					<div class="posts">
-					 <div class="date">
-								<figure><span>23</span>March</figure>
-						</div>
-								<div class="post_desc">
-									<p>Lorem ipsum dolor sit amet consec tetuer adipiscing elit Praesent vestibulum molestie.</p>
-							</div>
-						 <div class="clear"></div>	
-					</div>
-					<div class="posts">
-					 <div class="date">
-								<figure><span>23</span>March</figure>
-						</div>
-								<div class="post_desc">
-									<p>Lorem ipsum dolor sit amet consec tetuer adipiscing elit Praesent.</p>
-							</div>
-						 <div class="clear"></div>	
-					</div>
-					<div class="posts">
-					 <div class="date">
-								<figure><span>23</span>March</figure>
-						</div>
-								<div class="post_desc">
-									<p>Lorem ipsum dolor sit amet consec tetuer adipiscing elit Praesent.</p>
-							</div>
-						 <div class="clear"></div>	
-					</div>
- 				</div>	 --}}
-                    <div class="content span_1_of_c">
+                <div class="row">
+                    <div class="col">
+                <div class="section group d-flex">
+                    
+                    <div class="content span_1_of_c mx-auto">
                         <div class="body">
                             <div class="table-responsive">
                                 <table class="table table-hover dashboard-task-infos table-dark">
@@ -164,6 +129,8 @@
                 </div>
             </div>
         </div>
+            </div>
+        </div>
     </div>
-    
+</div>
     @endsection
