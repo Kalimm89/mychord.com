@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 {{-- @section('title', 'Markedia - Форум :: Home') --}}
-@section('header')
+@section('content')
 
 
 <div class="container">
@@ -95,9 +95,9 @@
                     <div class="col">
                 <div class="section group d-flex">
                     
-                    <div class="content span_1_of_c mx-auto">
+                    <div class="content span_1_of_c">
                         <div class="body">
-                            <div class="table-responsive">
+                            
                                 <table class="table table-hover dashboard-task-infos table-dark">
                                     <thead>
                                         <tr>
@@ -109,20 +109,21 @@
                                             <th>Караоке</th>
                                         </tr>
                                     </thead>
-                                    {{-- <tbody>
+                                    <tbody>
                                         @foreach ($songs as $song)
                                             <tr>
                                                 <td>{{ $song->id }}</td>
                                                 <td>{{ $song->artist->title }}</td>
-                                                <td>{{ $song->title }}</td>
+                                                <td><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
                                                 <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
-                                                <td>{{ $song->chord }}</td>
-                                                <td>{{ $song->video }}</td>
+                                                <td><a href="{{ $song->chord }}"><img src="/public/assets/user/images/music.png" alt=""></a></td>
+                                                <td><a href="{{ $song->video }}"><img src="/public/assets/user/images/Youtube.png" alt=""></a></td>
+                                                
                                             </tr>
                                         @endforeach
-                                    </tbody> --}}
+                                    </tbody>
                                 </table>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="clear"></div>

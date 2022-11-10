@@ -96,7 +96,7 @@
                             <li><a href="about.html">Жанры</a></li>
                         </ul>
                     </li>
-                    <li><a href="featured.html">Авторизация</a></li>
+                    <li><a href="{{ route('login.create') }}">Авторизация</a></li>
                     
                 </ul>
             </div>
@@ -107,7 +107,7 @@
         </div>
     </div>
 
-    @yield('header')
+    @yield('content')
 
 <div class="footer">
        

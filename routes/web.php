@@ -19,6 +19,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/article/{slug}', [HomeController::class, 'show'])->name('homes.single');
 
 Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
