@@ -108,6 +108,7 @@
     </div>
 
     @yield('content')
+    <hr>
 
 <div class="footer">
        
