@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\StyleController;
 use App\Http\Controllers\Admin\SongController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArtistSingleController;
+use App\Http\Controllers\StyleSingleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/article/{slug}', [HomeController::class, 'show'])->name('homes.single');
+Route::get('/artist/{slug}', [ArtistSingleController::class, 'show'])->name('artists.single');
+Route::get('/style/{slug}', [StyleingleController::class, 'show'])->name('styles.single');
 
 Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
