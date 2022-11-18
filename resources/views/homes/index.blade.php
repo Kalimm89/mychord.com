@@ -113,7 +113,7 @@
                                         @foreach ($songs as $song)
                                             <tr>
                                                 <td>{{ $song->id }}</td>
-                                                <td>{{ $song->artist->title }}</td>
+                                                <td><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}" title="">{{ $song->artist->title }}</a></td>
                                                 <td><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
                                                 <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
                                                 <td><a href="{{ $song->chord }}"><img src="/public/assets/user/images/music.png" alt=""></a></td>

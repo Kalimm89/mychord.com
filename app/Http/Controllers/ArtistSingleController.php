@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Artist;
+use App\Models\Song;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ArtistController extends Controller
+class ArtistSingleController extends Controller
 {
     
     public function show($slug) {

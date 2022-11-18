@@ -23,7 +23,7 @@ use App\Http\Controllers\StyleSingleController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/article/{slug}', [HomeController::class, 'show'])->name('homes.single');
 Route::get('/artist/{slug}', [ArtistSingleController::class, 'show'])->name('artists.single');
-Route::get('/style/{slug}', [StyleingleController::class, 'show'])->name('styles.single');
+Route::get('/style/{slug}', [StyleSingleController::class, 'show'])->name('styles.single');
 
 Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');

@@ -6,8 +6,8 @@
                             <div class="blog-title-area">
                                 <ol class="breadcrumb hidden-xs-down">
                                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">{{ $song->artist->title }}</a></li>
-                                    <li class="breadcrumb-item active">{{ $song->title }}</li>
+                                    <li class="breadcrumb-item"><a href="#">{{ $artist->title }}</a></li>
+                                    
                                 </ol>
 
                                 <div class="d-flex m-2 p-2">
@@ -27,13 +27,14 @@
                                     <tbody>
                                         
                                             <tr>
+                                                @foreach ($songs as $song)
                                                 <td>{{ $song->id }}</td>
-                                                <td>{{ $song->artist->title }}</td>
+                                                <td><a href="{{ route('artists.single', ['slug' => $artist->slug]) }}" title="">{{ $artist->title }}</a></td>
                                                 <td><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
                                                 <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
                                                 <td><a href="{{ $song->chord }}"><img src="/public/assets/user/images/music.png" alt=""></a></td>
                                                 <td><a href="{{ $song->video }}"><img src="/public/assets/user/images/Youtube.png" alt=""></a></td>
-                                                
+                                                @endforeach
                                             </tr>
                                        
                                     </tbody>
