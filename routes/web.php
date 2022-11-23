@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArtistSingleController;
 use App\Http\Controllers\StyleSingleController;
+use App\Http\Controllers\SearchController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/article/{slug}', [HomeController::class, 'show'])->name('homes.single');
 Route::get('/artist/{slug}', [ArtistSingleController::class, 'show'])->name('artists.single');
 Route::get('/style/{slug}', [StyleSingleController::class, 'show'])->name('styles.single');
+Route::get('/search', [SearchController::class, 'index'])->name('search');
 
 Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
