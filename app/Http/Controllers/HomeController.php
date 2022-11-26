@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $songs = Song::with('artist')->orderBy('id', 'desc')->simplePaginate(10);
+        $songs = Song::with('artist')->orderBy('id', 'desc')->simplePaginate(5);
         return view('homes.index', compact('songs'));
     }
 

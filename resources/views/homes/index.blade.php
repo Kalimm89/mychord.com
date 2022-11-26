@@ -93,19 +93,19 @@
                                 <div class="main-menu d-none d-md-block">
                                     <nav>                  
                                         <ul id="navigation">    
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="categori.html">Category</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Pages</a>
+                                            <li><a href="{{ route('home') }}">Главная</a></li>
+                                            <li><a href="#">Исполнители</a></li>
+                                            <li><a href="#">Жанры</a></li>
+                                            {{-- <li><a href="latest_news.html">Latest News</a></li> --}}
+                                            <li><a href="{{ route('login') }}">Авторизация</a></li>
+                                            {{-- <li><a href="#">Pages</a>
                                                 <ul class="submenu">
                                                     <li><a href="elements.html">Element</a></li>
                                                     <li><a href="blog.html">Blog</a></li>
                                                     <li><a href="single-blog.html">Blog Details</a></li>
                                                     <li><a href="details.html">Categori Details</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </nav>
                                 </div>
@@ -207,17 +207,22 @@
                         </div>
                     </div>
                     <!-- Riht content -->
+                    
                     <div class="col-lg-4">
+                        @foreach ($songs as $song)
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
                                 <img src="/public/assets/img/trending/right1.jpg" alt="">
                             </div>
                             <div class="trand-right-cap">
-                                <span class="color1">Concert</span>
-                                <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
+                                <span class="color1">{{ $song->artist->title }}</span>
+                                <h4><a href="details.html">{{ $song->title }}</a></h4>
                             </div>
                         </div>
-                        <div class="trand-right-single d-flex">
+                        @endforeach
+                    </div>
+                        
+                        {{-- <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
                                 <img src="/public/assets/img/trending/right2.jpg" alt="">
                             </div>
@@ -252,7 +257,7 @@
                                 <span class="color1">Skeping</span>
                                 <h4><a href="details.html">Welcome To The Best Model Winner Contest</a></h4>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
