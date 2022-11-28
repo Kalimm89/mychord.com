@@ -24,6 +24,15 @@
                                         placeholder="Название">
                                     {{-- <label for="title">Название</label> --}}
                                 </div>
+                                <div class="form-group">
+                                    <label for="thumbnail">Изображение</label>
+                                    <div class="input-group">
+                                    <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="thumbnail" id="thumbnail">
+                                    <label class="custom-file-label" for="thumbnail">Choose file</label>
+                                    </div>
+                                    </div>
+                                    </div>
 
                             </div>
 

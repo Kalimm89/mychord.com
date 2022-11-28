@@ -27,7 +27,14 @@ class ArtistController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'thumbnail' => 'nullable|image'
         ]);
+
+        // $data = $request->all();
+        $data['thumbnail'] = Artist::uploadImage($request);
+
+        Artist::create($data);
+
         Artist::create($request->all());
         $request->session()->flash('success', 'Исполнитель добавлен');
         return redirect()->route('artists.index');
