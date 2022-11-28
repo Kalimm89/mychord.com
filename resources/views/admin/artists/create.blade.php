@@ -15,7 +15,7 @@
                     </div>
                     <div class="body">
                         <form id="form_advanced_validation" role="form" method="post"
-                            action="{{ route('artists.store') }}">
+                            action="{{ route('artists.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group form-float">
                                 <div class="form-line">
@@ -24,19 +24,17 @@
                                         placeholder="Название">
                                     {{-- <label for="title">Название</label> --}}
                                 </div>
-                                <div class="form-group">
-                                    <label for="thumbnail">Изображение</label>
-                                    <div class="input-group">
-                                    <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="thumbnail" id="thumbnail">
-                                    <label class="custom-file-label" for="thumbnail">Choose file</label>
-                                    </div>
-                                    </div>
-                                    </div>
+                                
 
                             </div>
-
-                            <button class="btn btn-primary waves-effect" type="submit">Сохранить</button>
+                            <div class="form-group">
+                                <label for="thumbnail">Изображение</label>
+                                
+                                <input type="file" name="thumbnail" id="thumbnail">
+                                
+                                
+                                </div>
+                            <input class="btn btn-primary waves-effect" type="submit">
                         </form>
                     </div>
                 </div>
