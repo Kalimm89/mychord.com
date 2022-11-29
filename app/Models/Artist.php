@@ -13,7 +13,7 @@ class Artist extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['title'];
+    protected $fillable = ['title', 'thumbnail'];
     
     public function sluggable(): array
     {
@@ -36,6 +36,14 @@ class Artist extends Model
         return null;
     }
 
+    public function getImage()
+    {
+        if (!$this->thumbnail) {
+            return asset("public/No-image.png");
+        }
+        return asset("public/uploads/{$this->thumbnail}");
+    }
+    
     public function songs() {
         return $this->hasMany(Song::class);
     }

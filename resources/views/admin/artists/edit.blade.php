@@ -15,7 +15,7 @@
                     </div>
                     <div class="body">
                         <form id="form_advanced_validation" role="form" method="post"
-                            action="{{ route('artists.update', ['artist' => $artist->id]) }}">
+                            action="{{ route('artists.update', ['artist' => $artist->id]) }}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group form-float">
@@ -27,8 +27,15 @@
                                 </div>
 
                             </div>
-
-                            <button class="btn btn-primary waves-effect" type="submit">Сохранить</button>
+                            <div class="form-group">
+                                <label for="thumbnail">Изображение</label>
+                                
+                                <input type="file" name="thumbnail" id="thumbnail">
+                                
+                                
+                                </div>
+                            <div><img src="{{ $artist->getImage() }}" alt="" width="400"></div>
+                            <input class="btn btn-primary waves-effect" type="submit">
                         </form>
                     </div>
                 </div>

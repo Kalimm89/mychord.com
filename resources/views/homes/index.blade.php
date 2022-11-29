@@ -67,7 +67,7 @@
                         @foreach ($songs as $song)
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
-                                <img src="/public/assets/img/trending/right1.jpg" alt="">
+                                <img src="{{ $song->artist->getImage() }}" alt="" width="100">
                             </div>
                             <div class="trand-right-cap">
                                 <span class="color1">{{ $song->artist->title }}</span>

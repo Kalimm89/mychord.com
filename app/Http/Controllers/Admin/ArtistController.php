@@ -27,23 +27,19 @@ class ArtistController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            // 'thumbnail' => 'nullable',
+            'thumbnail' => 'nullable|image'
         ]);
         
         
         $data = $request->all();
-        // dd($data['thumbnail']);
-        // $data['thumbnail'] = Artist::uploadImage($request);
-         
-        // Artist::create($data);
-        
+       
         if ($request->hasFile('thumbnail')) {
             $folder = date('Y-m-d');
             $data['thumbnail'] = $request->file('thumbnail')->store("images/{$folder}");
         }
 
         Artist::create($data);
-        // $request->session()->flash('success', 'Исполнитель добавлен');
+        $request->session()->flash('success', 'Исполнитель добавлен');
         return redirect()->route('artists.index');
         
     }
@@ -61,9 +57,18 @@ class ArtistController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'thumbnail' => 'nullable|image'
         ]);
         $artist = Artist::find($id);
-        $artist->update($request->all());
+
+        $data = $request->all();
+
+            if($file = Artist::uploadImage($request, $artist->thumbnail)) {
+                $data['thumbnail'] = $file;
+            }
+
+
+        $artist->update($data);
         return redirect()->route('artists.index')->with('success', 'Изменения сохранены');
     }
 
