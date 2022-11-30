@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <!-- Trending Bottom -->
-                        <div class="trending-bottom">
+                        {{-- <div class="trending-bottom">
                             <div class="row">
                                 <div class="col-lg-4">
                                 <div class="single-bottom mb-35">
@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- Riht content -->
                     
@@ -70,8 +70,8 @@
                                 <img src="{{ $song->artist->getImage() }}" alt="" width="100">
                             </div>
                             <div class="trand-right-cap">
-                                <span class="color1">{{ $song->artist->title }}</span>
-                                <h4><a href="details.html">{{ $song->title }}</a></h4>
+                                <span class="color1"><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}" title="">{{ $song->artist->title }}</a></span>
+                                <h4><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></h4>
                             </div>
                         </div>
                         @endforeach
