@@ -17,8 +17,8 @@
                             <div class="trend-top-img">
                                 <img src="/public/assets/img/trending/trending_top.jpg" alt="">
                                 <div class="trend-top-cap">
-                                    <span>Appetizers</span>
-                                    <h2><a href="details.html">Welcome To The Best Model Winner<br> Contest At Look of the year</a></h2>
+                                    
+                                    <h2><a href="details.html">Каталог популярных песен</a></h2>
                                 </div>
                             </div>
                         </div>

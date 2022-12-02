@@ -23,6 +23,7 @@ use App\Http\Controllers\SearchController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/article/{slug}', [HomeController::class, 'show'])->name('homes.single');
+Route::get('/artist', [ArtistSingleController::class, 'index'])->name('artists.all');
 Route::get('/artist/{slug}', [ArtistSingleController::class, 'show'])->name('artists.single');
 Route::get('/style/{slug}', [StyleSingleController::class, 'show'])->name('styles.single');
 Route::get('/search', [SearchController::class, 'index'])->name('search');

@@ -13,9 +13,9 @@
                             <div class="main-menu d-none d-md-block">
                                 <nav>                  
                                     <ul id="navigation">  
-                                        <li><a href="index.html"><img class="" width="200" src="/public/assets/img/logo/logo1.png" alt=""></a></li> 
+                                        <li><a href="{{ route('home') }}"><img class="" width="200" src="/public/assets/img/logo/logo1.png" alt=""></a></li> 
                                         <li><a href="{{ route('home') }}">Главная</a></li>
-                                        <li><a href="#">Исполнители</a></li>
+                                        <li><a href="{{ route('artists.all') }}">Исполнители</a></li>
                                         <li><a href="#">Жанры</a></li>
                     
                                         <li><a href="{{ route('login') }}">Авторизация</a></li>
