@@ -30,7 +30,14 @@
                                                 <td>{{ $song->id }}</td>
                                                 <td><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}" title="">{{ $song->artist->title }}</a></td>
                                                 <td><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
-                                                <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
+                                                @if($song->styles->count())
+                                                <td>
+                                                @foreach($song->styles as $style)
+                                                <a href="{{ route('styles.single', ['slug' => $style->slug]) }}" title="" class="bg-primary">{{ $style->title }}</a>
+                                                @endforeach
+                                            </td>
+                                                @endif
+                                                
                                                 <td><a href="{{ $song->chord }}"><img src="/public/assets/user/images/music.png" alt=""></a></td>
                                                 <td><a href="{{ $song->video }}"><img src="/public/assets/user/images/Youtube.png" alt=""></a></td>
                                                 
