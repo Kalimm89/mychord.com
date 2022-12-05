@@ -17,9 +17,21 @@
                                         <li><a href="{{ route('home') }}">Главная</a></li>
                                         <li><a href="{{ route('artists.all') }}">Исполнители</a></li>
                                         <li><a href="{{ route('styles.all') }}">Жанры</a></li>
-                    
-                                        <li><a href="{{ route('login') }}">Авторизация</a></li>
-                                       
+                                        @if (auth()->check())
+                                        @if (auth()->user()->is_admin)
+                                        <li><a href="{{ route('admin') }}">{{ auth()->user()->name }}</a></li>
+                                        @else
+                                        <li><a href="#">{{ auth()->user()->name }}</a></li>
+                                        @endif
+                                        <li><a href="{{ route('logout') }}">Выйти</a></li>
+                                        @else
+                                        <li>
+                                            <ul>
+                                                <li><a href="{{ route('login') }}">Авторизация</a></li>
+                                                <li><a href="{{ route('register.create') }}">Регистрация</a></li>
+                                            </ul>
+                                        </li>
+                                       @endif
                                     </ul>
                                 </nav>
                             </div>

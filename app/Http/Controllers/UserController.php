@@ -45,7 +45,7 @@ class UserController extends Controller
         ])) {
             session()->flash('success', 'Вы авторизованны!');
             if(Auth::user()->is_admin) {
-                return redirect()->route('admin');
+                return redirect()->route('home');
             } else {
                 return redirect('/');
             }
@@ -55,6 +55,6 @@ class UserController extends Controller
 
     public function logout() {
         Auth::logout();
-        return redirect()->route('login.create');
+        return redirect()->route('home');
     }
 }
