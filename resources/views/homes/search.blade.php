@@ -40,7 +40,7 @@
                     
                     <div class="content span_1_of_c">
                         <div class="body">
-                            
+                            @if($songs->count())
                                 <table class="table table-hover dashboard-task-infos table-dark">
                                     <thead>
                                         <tr>
@@ -53,12 +53,19 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        
                                         @foreach ($songs as $song)
                                             <tr>
                                                 <td>{{ $song->id }}</td>
                                                 <td><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}" title="">{{ $song->artist->title }}</a></td>
                                                 <td><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
-                                                <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
+                                                @if($song->styles->count())
+                                                <td>
+                                                @foreach($song->styles as $style)
+                                                <a href="{{ route('styles.single', ['slug' => $style->slug]) }}" title="" class="bg-primary">{{ $style->title }}</a>
+                                                @endforeach
+                                            </td>
+                                                @endif
                                                 <td><a href="{{ $song->chord }}"><img src="/public/assets/user/images/music.png" alt=""></a></td>
                                                 <td><a href="{{ $song->video }}"><img src="/public/assets/user/images/Youtube.png" alt=""></a></td>
                                                 
@@ -66,7 +73,29 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                            
+                                        @elseif(($artists->count()))
+                                        <table class="table table-hover dashboard-task-infos table-dark">
+                                            <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>Исполнитель</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                        @foreach ($artists as $song)
+                                            <tr>
+                                                <td>{{ $song->id }}</td>
+                                                <td><a href="{{ route('artists.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
+                                                
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                                @else
+                                <p>По вашему запросу ничего не найдено</p>
+                                
+                                @endif
                         </div>
                     </div>
                     <div class="clear"></div>

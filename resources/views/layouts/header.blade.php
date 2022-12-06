@@ -40,10 +40,7 @@
                             <div class="header-right-btn f-right d-none d-lg-block">
                                 <i class="fas fa-search special-tag"></i>
                                 <div class="search-box">
-                                    {{-- <form method="get" action="{{ route('search') }}">
-                                        <input type="text" name="s" value="" required>
-                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                    </form> --}}
+                                    
                                     <form class="form-inline" method="get" action="{{ route('search') }}">
                                         <input name="s" class="form-control mr-sm-2 " type="text" placeholder="Введите название" required="">
                                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>

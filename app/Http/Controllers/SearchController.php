@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artist;
 use App\Models\Song;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class SearchController extends Controller
         ]);
         $s = $request->s;
         $songs = Song::where('title', 'LIKE', "%{$s}%")->with('artist')->simplePaginate(10);
-        return view('homes.search', compact('songs', 's'));
+        $artists = Artist::where('title', 'LIKE', "%{$s}%")->with('songs')->simplePaginate(10);
+        return view('homes.search', compact('songs', 'artists', 's'));
     }
 }
