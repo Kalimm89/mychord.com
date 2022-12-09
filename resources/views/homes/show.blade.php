@@ -5,8 +5,8 @@
 <div class="page-wrapper p-5">
                             <div class="blog-title-area">
                                 <ol class="breadcrumb hidden-xs-down">
-                                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">{{ $song->artist->title }}</a></li>
+                                    {{-- <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li> --}}
+                                    <li class="breadcrumb-item"><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}">{{ $song->artist->title }}</a></li>
                                     <li class="breadcrumb-item active">{{ $song->title }}</li>
                                 </ol>
 
@@ -16,7 +16,7 @@
                                 <table class="table table-hover dashboard-task-infos table-dark">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
+                                            {{-- <th>Id</th> --}}
                                             <th>Исполнитель</th>
                                             <th>Название</th>
                                             <th>Жанр</th>
@@ -27,7 +27,7 @@
                                     <tbody>
                                         
                                             <tr>
-                                                <td>{{ $song->id }}</td>
+                                                {{-- <td>{{ $song->id }}</td> --}}
                                                 <td><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}" title="">{{ $song->artist->title }}</a></td>
                                                 <td><a href="{{ route('homes.single', ['slug' => $song->slug]) }}" title="">{{ $song->title }}</a></td>
                                                 @if($song->styles->count())

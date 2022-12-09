@@ -10,7 +10,8 @@ use App\Models\Song;
 class StyleSingleController extends Controller
 {
     public function index() {
-        $styles = Style::orderBy('id', 'desc')->simplePaginate(10);
+        // $styles = Style::orderBy('id', 'desc')->simplePaginate(10);
+        $styles = Style::withCount('songs')->orderBy('songs_count', 'desc')->simplePaginate(10);
         return view('styles.index', compact('styles'));
     }
 

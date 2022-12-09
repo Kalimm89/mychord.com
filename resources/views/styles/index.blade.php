@@ -7,8 +7,8 @@
     <table class="table table-bordered border-primary">
         <thead>
           <tr>
-            <th>Id</th>
-            <th>Жанр</th>
+            <th class="col-2">Кол-во песен</th>
+            <th >Жанр</th>
           </tr>
         </thead>
         <tbody>
@@ -16,7 +16,7 @@
           <tr>
     
             
-                    <td scope="row">{{ $style->id }}</td>
+                    <td scope="row">{{ $style->songs_count }}</td>
                     
                     <td><a href="{{ route('styles.single', ['slug' => $style->slug]) }}" title="" class="bg-primary">{{ $style->title }}</a></td>
                    

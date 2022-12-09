@@ -31,7 +31,7 @@
                         <div class="trand-right-single d-flex">
                             <div class="trand-right-img">
                                 <img src="{{ $song->artist->getImage() }}" alt="" width="100">
-                                <span>{{ $song->count() }}</span>
+                                {{-- <span>{{ $song->count() }}</span> --}}
                             </div>
                             <div class="trand-right-cap">
                                 <span class="color1"><a href="{{ route('artists.single', ['slug' => $song->artist->slug]) }}" title="">{{ $song->artist->title }}</a></span>
