@@ -68,8 +68,8 @@
                                                         <td>{{ $song->artist->title }}</td>
                                                         <td>{{ $song->title }}</td>
                                                         <td>{{ $song->styles->pluck('title')->join(', ') }}</td>
-                                                        <td>{{ $song->chord }}</td>
-                                                        <td>{{ $song->video }}</td>
+                                                        <td><a href="{{ $song->chord }}"><img src="/public/assets/user/images/music.png" alt=""></a></td>
+                                                        <td><a href="{{ $song->video }}"><img src="/public/assets/user/images/Youtube.png" alt=""></a></td>
                                                         
                                                         <td>
                                                             <a href="{{ route('songs.edit', $song->id) }}"
